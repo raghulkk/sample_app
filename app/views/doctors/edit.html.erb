@@ -1,0 +1,12 @@
+<br>
+<br>
+  <%= form_with url: "/doctors/#{@doctor.id}", method: :put do |form| %>
+  <%= form.label :name, "Name" %>
+  <%= form.text_field :name, value: @doctor.name  %>
+  <br>
+  <%= form.label :department, "Department" %>
+  <%= form.text_field :department, value: @doctor.department %>
+  <br>
+  <br>
+  <%= form.submit "Update" %>
+<% end %>

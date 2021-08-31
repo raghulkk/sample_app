@@ -1,0 +1,12 @@
+<br>
+<br>
+<br>
+<%= form_with url: "/doctors", method: :post do |form| %>
+  <%= form.label :Name, "Name:" %>
+  <%= form.text_field :Name %>
+<br>
+  <%= form.label :department, "department:" %>
+  <%= form.text_field :department%>
+<br>
+  <%= form.submit "create" %>
+<% end %>

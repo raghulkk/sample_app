@@ -1,0 +1,2 @@
+class InfoArticle < ApplicationRecord
+end

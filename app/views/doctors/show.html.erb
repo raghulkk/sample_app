@@ -1,0 +1,30 @@
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Department</th>
+
+  </tr>
+    <tr>
+      <th><%= @doctor.id %></th>
+      <th><%= @doctor.name %></th>
+      <th><%= @doctor.department %></th>
+    </tr>
+  </table>

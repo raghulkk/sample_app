@@ -1,0 +1,40 @@
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>department</th>
+  </tr>
+  <% @doctors.each do |elem| %>
+  <tr>
+    <th><%= elem.id %></th>
+    <th><%= elem.name %></th>
+    <th><%=elem.department%></th>
+    <th><li><a href="/doctors/<%= elem.id %>">View</a></li></th>
+    <th><li><a href="/doctors/<%= elem.id %>/edit">Edit</a></li></th>
+    <th><%= link_to "Delete", doctor_path(elem), data: { method: :delete } %></th>
+  </tr>
+  <% end %>
+  </table> 
+
+  <%= form_with url: "/doctors/search", method: :get do |form| %>
+  <%= form.label :query, "Search for:" %>
+  <%= form.text_field :query %>
+  <%= form.submit "Search" %>
+<% end %>

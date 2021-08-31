@@ -1,0 +1,16 @@
+<br>
+<br>
+  <%= form_with url: "/users/#{@user.id}", method: :put do |form| %>
+  <%= form.label :name, "Name" %>
+  <%= form.text_field :name, value: @user.name  %>
+  <br>
+  <%= form.label :age, "Age" %>
+  <%= form.text_field :age, value: @user.age %>
+  <br>
+  <br>
+   <%= form.label :age, "Email" %>
+  <%= form.text_field :mail_id, value: @user.mail_id %>
+  <br>
+  <br>
+  <%= form.submit "Update" %>
+<% end %>
